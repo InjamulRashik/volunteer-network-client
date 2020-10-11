@@ -12,7 +12,7 @@ const Login = () => {
             <b>Login With</b>
           </h2>{" "}
           <br />
-          <button className="btn">
+          <button className="btn loginBtn">
             {" "}
             <span>
               <img className="icon" src={gIcon} alt="" />
