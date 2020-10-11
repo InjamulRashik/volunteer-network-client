@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import { volunteerData } from "../../fakeData/volunteerData";
 import Header from "../../Header";
-import childSupport from "../../images/childSupport.png";
+import Volunteer from "../Volunteer/Volunteer";
 
 import "./Home.css";
 
 const Home = () => {
+  const volunteer = volunteerData;
+  const [volunteers, setVolunteers] = useState(volunteer);
   return (
     <section className="top">
       <Header></Header>
@@ -20,6 +23,13 @@ const Home = () => {
           placeholder="Search...."
         />{" "}
         <button className="btn btn-primary searchBtn">Search</button>
+      </div>
+      <div className="container vol-cards">
+        <div className="row d-flex justify-content-around">
+          {volunteers.map((volunteer) => (
+            <Volunteer volunteer={volunteer}></Volunteer>
+          ))}
+        </div>
       </div>
     </section>
   );
