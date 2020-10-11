@@ -7,7 +7,9 @@ const Home = () => {
   return (
     <section className="top">
       <Header></Header>
-      <h1 className="heading">I GROW BY HELPING PEOPLE IN NEED</h1>
+      <h1 className="heading">
+        <b>I GROW BY HELPING PEOPLE IN NEED</b>
+      </h1>
       <div className="searchBar">
         <input
           className="input"
