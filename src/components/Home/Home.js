@@ -1,5 +1,6 @@
 import React from "react";
-import Header from "../Header";
+import Header from "../../Header";
+
 import "./Home.css";
 
 const Home = () => {
@@ -15,7 +16,7 @@ const Home = () => {
           id=""
           placeholder="Search...."
         />{" "}
-        <button className="btn btn-primary">Search</button>
+        <button className="btn btn-primary searchBtn">Search</button>
       </div>
     </section>
   );
