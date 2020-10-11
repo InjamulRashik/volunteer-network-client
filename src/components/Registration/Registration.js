@@ -1,7 +1,6 @@
 import React from "react";
 import "./Registration.css";
 import logo from "../../logo.png";
-import gIcon from "../../logos/google.png";
 import { TextField } from "@material-ui/core";
 
 const Registration = () => {
