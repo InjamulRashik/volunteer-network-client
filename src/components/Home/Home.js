@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../../Header";
+import childSupport from "../../images/childSupport.png";
 
 import "./Home.css";
 

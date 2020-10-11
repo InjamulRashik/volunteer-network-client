@@ -25,10 +25,10 @@ const Login = () => {
       .catch((error) => {});
   };
   return (
-    <div>
+    <div className="container">
       <img className="logo" src={logo} alt="" />
-      <div className="content">
-        <div className="form">
+      <div className="content container">
+        <div className="form container">
           <h2>
             <b>Login With</b>
           </h2>{" "}

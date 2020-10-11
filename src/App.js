@@ -7,7 +7,7 @@ import Registration from "./components/Registration/Registration";
 function App() {
   return (
     <div>
-      <Login></Login>
+      <Home></Home>
     </div>
   );
 }
