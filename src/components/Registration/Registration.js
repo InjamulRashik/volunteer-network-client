@@ -3,12 +3,9 @@ import { useForm } from "react-hook-form";
 import "./Registration.css";
 import logo from "../../logo.png";
 import { TextField, useFormControl } from "@material-ui/core";
-import { useParams } from "react-router-dom";
+import { useHistory, useLocation, useParams } from "react-router-dom";
 import { volunteerData } from "../../fakeData/volunteerData";
 import { UserContext } from "../../App";
-import * as firebase from "firebase/app";
-import "firebase/auth";
-import firebaseConfig from "../../components/Login/firebase.config";
 
 const Registration = () => {
   const n = new Date();
@@ -19,10 +16,9 @@ const Registration = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const { key } = useParams();
   const vdKey = volunteerData.find((vdkey) => vdkey.key === key);
-  if (firebase.apps.length === 0) {
-    firebase.initializeApp(firebaseConfig);
-  }
-  const { register, handleSubmit, watch, errors } = useForm();
+  let history = useHistory();
+
+  const { handleSubmit } = useForm();
   const [value, setValue] = useState("");
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -43,7 +39,9 @@ const Registration = () => {
       },
       body: JSON.stringify(userInfo),
     }).then((res) => res.json());
-    alert("Registration Done");
+    if (window.confirm("Registration Done")) {
+      history.push("/userinfo");
+    }
   };
 
   return (
