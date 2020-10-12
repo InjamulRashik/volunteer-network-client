@@ -10,6 +10,10 @@ import "firebase/auth";
 import firebaseConfig from "../../components/Login/firebase.config";
 
 const Registration = () => {
+  const n = new Date();
+  const y = n.getFullYear();
+  const m = n.getMonth() + 1;
+  const d = n.getDate();
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const { key } = useParams();
   const vdKey = volunteerData.find((vdkey) => vdkey.key === key);
@@ -27,12 +31,14 @@ const Registration = () => {
         <form className="form form-group">
           <TextField id="standard-basic" value={loggedInUser.name} /> <br />
           <TextField id="standard-basic" value={loggedInUser.email} /> <br />
-          <TextField id="standard-basic" label="Date" /> <br />
-          <TextField id="standard-basic" label="Description" /> <br />
+          <TextField id="standard-basic" value={d + "/" + m + "/" + y} /> <br />
+          <TextField id="standard-basic" label="Description" required /> <br />
           <TextField id="standard-basic" value={key} /> <br />
           <button
+            type="submit"
             onClick={(e) => {
               e.preventDefault();
+              console.log("Registration Clicked!");
             }}
             className="btn btn-primary"
           >
