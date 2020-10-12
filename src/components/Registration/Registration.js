@@ -27,13 +27,13 @@ const Registration = () => {
   const handleChange = (e) => {
     setValue(e.target.value);
   };
-  const onSubmit = (data) => {
+  const onSubmit = () => {
     const userInfo = {
       name: loggedInUser.name,
       email: loggedInUser.email,
       date: currentDate,
       description: value,
-      volunteerName: key,
+      volunteerType: key,
     };
 
     fetch("http://localhost:5000/addUser", {
@@ -42,11 +42,8 @@ const Registration = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(userInfo),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
+    }).then((res) => res.json());
+    alert("Registration Done");
   };
 
   return (
