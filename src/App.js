@@ -6,6 +6,7 @@ import Registration from "./components/Registration/Registration";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import UserInfo from "./components/UserInfo/UserInfo";
+import Admin from "./components/Admin/Admin";
 
 export const UserContext = createContext();
 
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/userinfo">
             <UserInfo />
+          </Route>
+          <Route path="/admin">
+            <Admin />
           </Route>
           <PrivateRoute path="/registration/:key">
             <Registration />
