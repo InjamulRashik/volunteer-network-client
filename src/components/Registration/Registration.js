@@ -2,8 +2,8 @@ import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import "./Registration.css";
 import logo from "../../logo.png";
-import { TextField, useFormControl } from "@material-ui/core";
-import { useHistory, useLocation, useParams } from "react-router-dom";
+import { TextField } from "@material-ui/core";
+import { useHistory, useParams } from "react-router-dom";
 import { volunteerData } from "../../fakeData/volunteerData";
 import { UserContext } from "../../App";
 

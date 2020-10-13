@@ -13,19 +13,19 @@ const Admin = () => {
       .then((data) => setUsers(data));
   }, []);
   return (
-    <div class="d-flex" id="wrapper">
-      <div class=" border-0" id="sidebar-wrapper">
-        <div class="sidebar-heading">
+    <div className="d-flex" id="wrapper">
+      <div className=" border-0" id="sidebar-wrapper">
+        <div className="sidebar-heading">
           <img style={{ width: "202px", height: "60px" }} src={logo} alt="" />{" "}
         </div>
-        <div class="list-group list-group-flush">
+        <div className="list-group list-group-flush">
           <p
             style={{
               fontWeight: "normal",
               fontSize: "16px",
             }}
             href="#asd"
-            class="list-group-item list-group-item-action text-primary "
+            className="list-group-item list-group-item-action text-primary "
           >
             <span>
               <img src={userIcon} alt="" />
@@ -38,7 +38,7 @@ const Admin = () => {
               fontSize: "16px",
             }}
             href="#dasd"
-            class="list-group-item list-group-item-action "
+            className="list-group-item list-group-item-action "
           >
             <span>
               <img style={{ width: "17px" }} src={plusIcon} alt="" />
@@ -49,7 +49,7 @@ const Admin = () => {
       </div>
 
       <div className="bg-light" id="page-content-wrapper">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white  border-0">
+        <nav className="navbar navbar-expand-lg navbar-light bg-white  border-0">
           <p
             style={{
               fontWeight: "bolder",
@@ -62,7 +62,7 @@ const Admin = () => {
           </p>
         </nav>
 
-        <div class="container-fluid ">
+        <div className="container-fluid ">
           <div
             style={{
               backgroundColor: "white",
@@ -71,8 +71,8 @@ const Admin = () => {
               borderRadius: "20px",
             }}
           >
-            <table class="table">
-              <thead style={{ backgroundColor: "#F5F6FA" }} class="">
+            <table className="table">
+              <thead style={{ backgroundColor: "#F5F6FA" }} className="">
                 <tr>
                   <th scope="col">Name</th>
                   <th scope="col">Email ID</th>

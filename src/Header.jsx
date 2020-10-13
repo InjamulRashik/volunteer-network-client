@@ -65,6 +65,9 @@ const Header = () => {
             </li>
             <li className="nav-item ">
               <button
+                onClick={() => {
+                  window.location = "/admin";
+                }}
                 style={{
                   width: "153px",
                 }}

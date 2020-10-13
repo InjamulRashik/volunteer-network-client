@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import volImage from "../../images/extraVolunteer.png";
 
 const Users = (props) => {

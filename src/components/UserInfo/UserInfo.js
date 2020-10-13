@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
 import { UserContext } from "../../App";
 import logo from "../../logo.png";
 import Users from "../Users/Users";
@@ -8,7 +7,7 @@ const UserInfo = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/userinfos?name=" + loggedInUser.name)
+    fetch("http://localhost:5000/userinfos?email=" + loggedInUser.email)
       .then((response) => response.json())
       .then((data) => setUsers(data));
   }, []);
