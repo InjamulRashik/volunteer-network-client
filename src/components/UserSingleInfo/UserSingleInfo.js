@@ -1,7 +1,7 @@
 import React from "react";
 import volImage from "../../images/extraVolunteer.png";
 
-const Users = (props) => {
+const UserSingleInfo = (props) => {
   return (
     <div style={{ marginBottom: "15px" }}>
       <div
@@ -24,7 +24,7 @@ const Users = (props) => {
         <div className="card-block px-2">
           <h4 className="card-title">{props.user.volunteerType}</h4>
           <p className="card-text">{props.user.date}</p>
-          <button className="btn btn-outline-danger">Cancel</button>
+          <button className="btn btn-light">Cancel</button>
         </div>
         <div className="w-100"></div>
       </div>
@@ -32,4 +32,4 @@ const Users = (props) => {
   );
 };
 
-export default Users;
+export default UserSingleInfo;

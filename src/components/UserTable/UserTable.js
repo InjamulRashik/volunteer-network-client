@@ -3,7 +3,7 @@ import dltIcons from "../../logos/trash-2 9.png";
 
 const UserTable = (props) => {
   function deleteUser(id) {
-    fetch(`http://localhost:5000/delete/${id}`, {
+    fetch(`https://glacial-lowlands-60039.herokuapp.com/delete/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())

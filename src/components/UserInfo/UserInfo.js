@@ -1,13 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../App";
 import logo from "../../logo.png";
-import Users from "../Users/Users";
+import UserSingleInfo from "../UserSingleInfo/UserSingleInfo";
+import Users from "../UserSingleInfo/UserSingleInfo";
 
 const UserInfo = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/userinfos?email=" + loggedInUser.email)
+    fetch(
+      "https://glacial-lowlands-60039.herokuapp.com/userinfos?email=" +
+        loggedInUser.email
+    )
       .then((response) => response.json())
       .then((data) => setUsers(data));
   }, []);
@@ -79,7 +83,7 @@ const UserInfo = () => {
       <div className="container">
         <div className="d-flex row flex-row justify-content-around ">
           {users.map((user) => (
-            <Users user={user}></Users>
+            <UserSingleInfo user={user}></UserSingleInfo>
           ))}
         </div>
       </div>

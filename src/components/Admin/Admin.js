@@ -8,7 +8,7 @@ import UserTable from "../UserTable/UserTable";
 const Admin = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/userinfotable")
+    fetch("https://glacial-lowlands-60039.herokuapp.com/userinfotable")
       .then((response) => response.json())
       .then((data) => setUsers(data));
   }, []);
@@ -60,6 +60,20 @@ const Admin = () => {
           >
             Volunteer register list
           </p>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li className="nav-item active">
+                <button
+                  onClick={() => {
+                    window.location = "/";
+                  }}
+                  className=" btn btn-primary"
+                >
+                  Back to Home <span class="sr-only">(current)</span>
+                </button>
+              </li>
+            </ul>
+          </div>
         </nav>
 
         <div className="container-fluid ">

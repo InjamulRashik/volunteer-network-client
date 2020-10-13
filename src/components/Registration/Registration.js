@@ -32,7 +32,7 @@ const Registration = () => {
       volunteerType: key,
     };
 
-    fetch("http://localhost:5000/addUser", {
+    fetch("https://glacial-lowlands-60039.herokuapp.com/addUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
