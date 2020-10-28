@@ -1,3 +1,18 @@
+## About this project
+
+Live link : [Volunteer Network](https://volunteer-network-mihr.web.app/) | [Server Link](https://github.com/InjamulRashik/volunteer-network-server-heroku)
+
+**This is a fullstack website to do volunteering works** <br />
+
+**`Functionalities`**
+
+- User can do volunteering work by selecting any services
+- User must be logged in to do volunteering work
+- User can see a list of selected volunteering works
+- Admin can delete data of a particular user
+
+## React
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
